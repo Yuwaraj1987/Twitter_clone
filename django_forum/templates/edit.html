@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block content %} {% load static %} 
+  <body class="home">
+    <div class="mainContainer">
+      <div class="main">
+
+      <!-- Header with logo -->
+        <div class="mainHeader">
+          <img class ="companyLogo" id="comp" src="{%static 'img/techis-logo.svg' %}"/>
+          <h1 class="homeTag">Edit</h1>
+        </div>
+
+        <!-- ...Edit Page.. -->
+        <form  method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+            <div class="writePostMainDiv">
+              <div class="profilePic"> 
+                <img id="proPic" src="{% static 'img/sample-icon.jpg' %}">
+              </div>
+              <div class="inputText">
+                <input class="yourNameInput" type="text" name="name" placeholder=" Your name" value = "{{post.name}}" required/>
+                <textarea class="textarea" name="body" placeholder="What's happening" required>{{post.body}}</textarea>
+                {% if post.image.url %}
+                  <img class ="postBorder" src ="{{ post.image.url}}" alt="postedphoto"/>
+                  {% endif %}
+                  <hr style="opacity: 0.3; margin: top 10px; margin-bottom:10px; width: 90%">
+              <div class="tweet">
+                <input class="chooseFile" type="file" name="image" /> 
+                      <a href ="/">
+                      <button class="cancelButton" value="cancel" type="button">Cancel</button></a>
+                    <button class="updateButton"  value ="tweet">Update</button>
+              </div>
+              </div> 
+            </div>
+        </form>
+        <div class="ditch"></div>
+      </div>      
+    </div>
+  </body>
+  {% endblock %}

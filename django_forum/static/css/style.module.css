@@ -1,0 +1,284 @@
+/*
+common
+******************/
+html,
+body{
+    height: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* main container css  */
+.mainContainer {
+    
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.main {
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    border-left: 1px solid rgb(212, 215, 216);
+    border-right: 1px solid rgb(212, 215, 216);
+
+}
+
+/*
+Header with logo
+******************/
+
+.mainHeader {
+    padding: 10px;
+    border-bottom: 1px solid rgb(235, 238, 240);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.companyLogo{
+    width: 50px;
+    margin-right: 20px;
+} 
+
+.homeTag {
+    margin-left: 0px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.content {
+    max-width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    border-left: 1px solid  #ccc;
+    border-right: 1px solid #ccc;
+}
+/*
+post
+********************/
+.writePostMainDiv {
+    /* padding: 10px;  */
+    display:flex; 
+    justify-content: space-between;
+    margin-left: 0px; 
+    width: 100%;
+    padding-top: 16px;
+    border-bottom:1px solid #ccc;
+    
+}
+
+#proPic{
+    width: 55px;
+    border-radius: 50%;
+    position: relative;
+    height: 55px;
+}
+
+.profilePic {
+    margin-right: 10px; 
+    padding: 15px;
+}
+
+.inputText {
+    width: 100%;
+}
+
+.mainHead {
+    padding: 10px;
+    border-bottom: 1px solid #ced4da;
+    display : flex;
+    justify-content: left;;
+    align-items: center;
+    margin: 0 auto;  
+}
+
+.yourNameInput {
+    border: 0px;
+    width: 90%;
+    background: #e6fef7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;  
+    font-size: 16px;
+    font-family: "Arial";
+}
+
+
+.textarea{
+    width: 90%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 0px;
+    outline: none;
+    font-family: "Arial";
+    font-size: 16px;
+    resize: none;
+}
+
+.tweet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+
+input::file-selector-button {
+    /* font-weight: bold; */
+    background-color:#ced4da;
+    padding-left: 10px 20px;
+    border: thin solid #ced4da;
+    color: #212529;
+    border-radius: 3px;
+    font-family: "Arial";
+    font-size: 16px;
+    flex-wrap: wrap;
+}
+
+.tweetButton{
+    background-color: rgb(29, 161, 242);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    height: 35px;
+    width: 60px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.chooseFile{
+    border: 1px solid rgba(0, 0, 0, .1);
+    opacity: 0.8;
+    font-size: 16px;
+}
+
+.ditch {
+    height: 15px;
+    background-color: rgb(247, 248, 249);
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+ .posts ul{
+    padding: 0;
+}
+
+.posts li {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+}
+
+.posts li .menu_icon{
+    width: 30px;
+    position: absolute;
+    right: 30px;
+    top: 18px;
+    border-radius: 5%;
+}
+
+.posts li .menu{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 65px;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+.posts li .menu a{
+    text-decoration: none;
+}
+
+
+.posts li .logo {
+    flex-basis: 15%;
+}
+
+.posts li .logo img {
+    width: 80%;
+    border-radius: 50%;
+}
+.posts li .name_body {
+    flex-basis: 85%;
+}
+
+.posts li .name_body .name {
+    font-weight: bold;
+    display: flex;
+}
+
+.posts li .name_body .datetime {
+    padding-left: 10px;
+    font-size: 14px;
+    color:rgb(71, 71, 71);
+}
+#like-btn{
+    width: 5%;
+}
+
+/* .posts li .like{
+    width:5%;
+} */ 
+
+
+/* ********* Edit Option *********** */
+
+.cancelButton{
+    background-color: rgb(73, 73, 73);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    height: 35px;
+    width: 60px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-radius: 0.25rem
+}
+
+.updateButton{
+    background-color: rgb(29, 161, 242);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    height: 35px;
+    width: 60px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-radius: 0.25rem
+}
+
+.postBorder{
+    width:300px;
+    border-radius: 10px;
+    
+}
+
+@media screen and (max-width: 500px) {
+    .posts li .name_body .name {
+        font-size: 20px;
+    }   
+}
+
+#like-btn {
+    width: 20px;
+
+}
